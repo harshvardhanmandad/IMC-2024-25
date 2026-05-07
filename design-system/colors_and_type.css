@@ -1,0 +1,203 @@
+/* ============================================================
+   MathAI — Color & Type Foundations
+   Source: Product Development MathAI / mathai-design-guidelines.md
+   ============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Epilogue:wght@400;500;600;700;800;900&display=swap');
+
+:root {
+  /* ── Core brand colors ─────────────────────────────────── */
+  --mai-purple:        #270F36;   /* Primary text, deep brand */
+  --mai-cream:         #FAF1F0;   /* App background */
+  --mai-white:         #FFFFFF;   /* Cards */
+  --mai-yellow:        #FFDE49;   /* Primary action */
+  --mai-yellow-amber:  #FFC107;   /* Yellow gradient end */
+  --mai-yellow-light:  #FCF6D7;   /* Soft yellow tint */
+  --mai-coral:         #F96B4C;   /* Avatar core, accent */
+  --mai-blue:          #000FFF;   /* Sheet titles, links */
+
+  /* ── Semantic ──────────────────────────────────────────── */
+  --mai-success:       #1DAE69;   /* Solid success */
+  --mai-success-grad-1:#10B981;   /* Modern success grad start */
+  --mai-success-grad-2:#059669;   /* Modern success grad end */
+  --mai-success-bg:    #F1FBF8;
+  --mai-success-bg-2:  #E8F9F4;
+  --mai-error:         #FB7D7D;   /* Pending / soft error */
+  --mai-danger:        #DC2626;   /* Hard alert (trial ending) */
+  --mai-danger-2:      #B91C1C;
+  --mai-warn:          #F59E0B;   /* Catch-up amber */
+  --mai-warn-2:        #D97706;
+
+  /* ── Text on cream ─────────────────────────────────────── */
+  --mai-fg-1:          #270F36;                     /* primary */
+  --mai-fg-2:          rgba(39, 15, 54, 0.7);       /* secondary */
+  --mai-fg-3:          rgba(39, 15, 54, 0.5);       /* tertiary, captions */
+  --mai-fg-4:          rgba(39, 15, 54, 0.4);       /* labels, eyebrows */
+
+  /* ── Neutrals / borders ────────────────────────────────── */
+  --mai-gray-50:       #F7FAFC;
+  --mai-gray-100:      #EDF2F7;
+  --mai-gray-200:      #E2E8F0;
+  --mai-gray-300:      #F0F0F0;
+  --mai-gray-600:      #718096;
+  --mai-border-soft:   rgba(39, 15, 54, 0.04);
+  --mai-border:        rgba(39, 15, 54, 0.08);
+
+  /* ── Social colors ─────────────────────────────────────── */
+  --mai-whatsapp:      #25D366;
+  --mai-email:         #EA4335;
+  --mai-sms:           #007AFF;
+
+  /* ── Gradients ─────────────────────────────────────────── */
+  --mai-grad-yellow:    linear-gradient(135deg, #FFDE49 0%, #FCF6D7 100%);
+  --mai-grad-yellow-2:  linear-gradient(145deg, #FFDE49 0%, #FFC107 100%);
+  --mai-grad-success:   linear-gradient(135deg, #F1FBF8 0%, #E8F9F4 100%);
+  --mai-grad-success-2: linear-gradient(145deg, #10B981 0%, #059669 100%);
+  --mai-grad-warn:      linear-gradient(145deg, #F59E0B 0%, #D97706 100%);
+  --mai-grad-danger:    linear-gradient(135deg, #DC2626 0%, #B91C1C 100%);
+  --mai-grad-cream:     linear-gradient(180deg, #FAF1F0 0%, #F5E6E4 100%);
+
+  /* ── Type ──────────────────────────────────────────────── */
+  --mai-font: 'Epilogue', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+
+  /* ─────────────────────────────────────────────────────────
+     CANONICAL TYPE SCALE (Figma-locked, 10 tokens)
+     Each row maps to a Figma style. Use the .mai-* class below
+     in markup; the raw size/weight vars are exposed for one-off
+     compositions.
+
+     Figma name              CSS class            Var           Use
+     ──────────────────────  ──────────────────   ───────────   ──────────────────────────
+     Display 1   24/700/-5%  .mai-title           --mai-title   page title
+     Display 2   20/700/-2%  .mai-heading         --mai-heading card heading, greeting name
+     Display 3   14/700       .mai-label           --mai-label   strong label, button text
+     Display 4   12/700       .mai-overline        --mai-overline eyebrow, tab label
+     Body Lg Reg 18/400       .mai-body-lg         --mai-body-lg lead paragraph
+     Body Lg Bld 18/700       .mai-body-lg-bold    --mai-body-lg-bold lead emphasis
+     Body Df Reg 14/400       .mai-body            --mai-body    default body
+     Body Df Bld 14/700       .mai-body-bold       --mai-body-bold body emphasis
+     Body Sm Reg 12/400       .mai-caption         --mai-caption helper, metadata
+     Body Sm Bld 12/700       .mai-caption-bold    --mai-caption-bold strong metadata
+     ───────────────────────────────────────────────────────── */
+  --mai-fs-title:    24px;   --mai-lh-title:    120%;   --mai-tracking-title:   -0.05em;
+  --mai-fs-heading:  20px;   --mai-lh-heading:  120%;   --mai-tracking-heading: -0.02em;
+  --mai-fs-label:    14px;   --mai-lh-label:    120%;
+  --mai-fs-overline: 12px;   --mai-lh-overline: 120%;
+  --mai-fs-body-lg:  18px;   --mai-lh-body-lg:  150%;
+  --mai-fs-body:     14px;   --mai-lh-body:     150%;
+  --mai-fs-caption:  12px;   --mai-lh-caption:  120%;
+
+  /* Hero extensions — in-product only. NOT in Figma type scale.
+     Reserved for stat numerals (247, 5, 4, 3) and the "MathAI"
+     splash wordmark. If you reach for a "big number," you want
+     one of these; otherwise stick to the 10 tokens above. */
+  --mai-fs-numeral:    32px;   /* big stat counters, hero numbers */
+  --mai-fs-numeral-sm: 22px;   /* compressed numerals in 4-col stat grids */
+  --mai-fs-wordmark:   32px;   /* "MathAI" splash logo */
+
+  /* Micro labels — off-Figma. Used only when a 4+ column UI strip
+     can't fit a 12px overline (calendar day labels, bottom-nav
+     labels, stat captions). Treat as a last resort. */
+  --mai-fs-micro:    10px;
+
+  /* Weights */
+  --mai-fw-regular:  400;
+  --mai-fw-medium:   500;
+  --mai-fw-semi:     600;
+  --mai-fw-bold:     700;
+  --mai-fw-xbold:    800;
+  --mai-fw-black:    900;
+
+  /* ── Spacing (8px grid) ────────────────────────────────── */
+  --mai-space-4:  4px;
+  --mai-space-6:  6px;
+  --mai-space-8:  8px;
+  --mai-space-10: 10px;
+  --mai-space-12: 12px;
+  --mai-space-14: 14px;
+  --mai-space-16: 16px;
+  --mai-space-18: 18px;
+  --mai-space-20: 20px;
+  --mai-space-24: 24px;
+  --mai-space-28: 28px;
+  --mai-space-32: 32px;
+
+  /* ── Radii ─────────────────────────────────────────────── */
+  --mai-radius-xs:  10px;   /* small btns, progress bar */
+  --mai-radius-sm:  12px;   /* buttons, small cards */
+  --mai-radius-md:  14px;   /* standard cards */
+  --mai-radius-lg:  16px;   /* medium cards */
+  --mai-radius-xl:  18px;   /* stats cards */
+  --mai-radius-2xl: 20px;   /* hero cards */
+  --mai-radius-3xl: 24px;   /* sheet top */
+  --mai-radius-full: 9999px;
+
+  /* ── Shadows ───────────────────────────────────────────── */
+  --mai-shadow-xs:        0 2px 4px rgba(0,0,0,0.06);
+  --mai-shadow-sm:        0 2px 8px rgba(0,0,0,0.06);
+  --mai-shadow-card:      0 2px 8px rgba(39, 15, 54, 0.04);
+  --mai-shadow-md:        0 4px 16px rgba(39, 15, 54, 0.06);
+  --mai-shadow-yellow:    0 4px 12px rgba(255, 222, 73, 0.30);
+  --mai-shadow-yellow-2:  0 4px 16px rgba(255, 222, 73, 0.35);
+  --mai-shadow-success:   0 4px 12px rgba(29, 174, 105, 0.15);
+  --mai-shadow-success-2: 0 4px 16px rgba(16, 185, 129, 0.35);
+  --mai-shadow-warn:      0 4px 16px rgba(245, 158, 11, 0.35);
+  --mai-shadow-nav:       0 -4px 20px rgba(39, 15, 54, 0.06);
+}
+
+/* ============================================================
+   Base reset + typography
+   ============================================================ */
+html, body {
+  font-family: var(--mai-font);
+  color: var(--mai-fg-1);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ── Canonical type classes (Figma-locked) ─────────────── */
+.mai-title         { font-family: var(--mai-font); font-size: var(--mai-fs-title);    font-weight: 700; line-height: 120%; letter-spacing: -0.05em; color: var(--mai-fg-1); }
+.mai-heading       { font-family: var(--mai-font); font-size: var(--mai-fs-heading);  font-weight: 700; line-height: 120%; letter-spacing: -0.02em; color: var(--mai-fg-1); }
+.mai-label         { font-family: var(--mai-font); font-size: var(--mai-fs-label);    font-weight: 700; line-height: 120%; letter-spacing: 0;        color: var(--mai-fg-1); }
+.mai-overline      { font-family: var(--mai-font); font-size: var(--mai-fs-overline); font-weight: 700; line-height: 120%; letter-spacing: 0;        color: var(--mai-fg-1); }
+
+.mai-body-lg       { font-family: var(--mai-font); font-size: var(--mai-fs-body-lg);  font-weight: 400; line-height: 150%; color: var(--mai-fg-1); }
+.mai-body-lg-bold  { font-family: var(--mai-font); font-size: var(--mai-fs-body-lg);  font-weight: 700; line-height: 150%; color: var(--mai-fg-1); }
+.mai-body          { font-family: var(--mai-font); font-size: var(--mai-fs-body);     font-weight: 400; line-height: 150%; color: var(--mai-fg-1); }
+.mai-body-bold     { font-family: var(--mai-font); font-size: var(--mai-fs-body);     font-weight: 700; line-height: 150%; color: var(--mai-fg-1); }
+.mai-caption       { font-family: var(--mai-font); font-size: var(--mai-fs-caption);  font-weight: 400; line-height: 120%; color: var(--mai-fg-2); }
+.mai-caption-bold  { font-family: var(--mai-font); font-size: var(--mai-fs-caption);  font-weight: 700; line-height: 120%; color: var(--mai-fg-1); }
+
+/* Hero extensions — for stat numerals and the splash wordmark only */
+.mai-numeral       { font-family: var(--mai-font); font-size: var(--mai-fs-numeral);    font-weight: 800; line-height: 100%; letter-spacing: -0.04em; color: var(--mai-fg-1); }
+.mai-numeral-sm    { font-family: var(--mai-font); font-size: var(--mai-fs-numeral-sm); font-weight: 800; line-height: 100%; letter-spacing: -0.03em; color: var(--mai-fg-1); }
+.mai-wordmark      { font-family: var(--mai-font); font-size: var(--mai-fs-wordmark);   font-weight: 800; line-height: 100%; letter-spacing: -0.04em; color: var(--mai-fg-1); }
+
+/* Micro labels — off-Figma fallback for cramped 4+ column UI strips */
+.mai-micro         { font-family: var(--mai-font); font-size: var(--mai-fs-micro);      font-weight: 700; line-height: 120%; letter-spacing: 0.05em; text-transform: uppercase; color: var(--mai-fg-1); }
+
+/* Mono is a utility, not a brand token */
+.mai-mono          { font-family: 'SF Mono', Monaco, 'Inconsolata', monospace; font-size: 13px; }
+
+/* Inline emphasis */
+.mai-strong        { font-weight: 700; color: var(--mai-fg-1); }
+.mai-accent        { color: var(--mai-coral); font-weight: 800; }
+.mai-link          { color: var(--mai-blue); text-decoration: none; font-weight: 600; }
+
+/* ── Animations referenced across the system ───────────── */
+@keyframes mai-float {
+  0%, 100% { transform: translateY(0); }
+  50%      { transform: translateY(-10px); }
+}
+@keyframes mai-breathe {
+  0%, 100% { transform: scale(1); }
+  50%      { transform: scale(1.04); }
+}
+@keyframes mai-pulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50%      { opacity: 0.5; transform: scale(1.2); }
+}
+@keyframes mai-fade-up {
+  from { opacity: 0; transform: translateY(8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
