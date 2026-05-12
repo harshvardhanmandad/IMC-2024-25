@@ -43,8 +43,9 @@ window.CREDIT_SVG_URI = 'data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%
 // to avoid shipping a 600px webp where a 64px slot is rendered.
 window.PRIZES = {
   // Physical
-  ipad:    { kind:'physical', label:'Apple iPad 10th Gen',          short:'iPad 10th Gen',         tagline:'Podium Champion',        img:'assets/prizes/ipad.webp',    thumb:'assets/prizes/ipad-thumb.webp',   months: 3,   accent:'gold'   },
-  kindle:  { kind:'physical', label:'Kindle Paperwhite',             short:'Kindle Paperwhite',     tagline:'2nd Place',              img:'assets/prizes/kindle.webp',  thumb:'assets/prizes/kindle-thumb.webp', months: 3,   accent:'silver' },
+  ipad:    { kind:'physical', label:'Apple iPad 10th Gen',          short:'iPad 10th Gen',         tagline:'(retired)',              img:'assets/prizes/ipad.webp',    thumb:'assets/prizes/ipad-thumb.webp',   months: 3,   accent:'gold'   },
+  kindle:  { kind:'physical', label:'Kindle Paperwhite',             short:'Kindle Paperwhite',     tagline:'Podium Champion',        img:'assets/prizes/kindle.webp',  thumb:'assets/prizes/kindle-thumb.webp', months: 3,   accent:'gold'   },
+  instax:  { kind:'physical', label:'Fujifilm Instax Mini 12',       short:'Instax Mini 12',        tagline:'2nd Place',              img:'assets/prizes/instax.webp',  thumb:'assets/prizes/instax-thumb.webp', months: 3,   accent:'silver' },
   a4:      { kind:'physical', label:'SEZNIK A4 Bluetooth Printer',   short:'A4 Printer',            tagline:'3rd Place',              img:'assets/prizes/a4.webp',      thumb:'assets/prizes/a4-thumb.webp',     months: 2.5, accent:'bronze' },
   mini:    { kind:'physical', label:'SEZNIK Mini Thermal Printer',   short:'Mini Printer',          tagline:'Top 10',                 img:'assets/prizes/mini.webp',    thumb:'assets/prizes/mini-thumb.webp',   months: 2,   accent:'top10'  },
   // Credit only
@@ -53,8 +54,8 @@ window.PRIZES = {
 };
 
 window.prizeForRank = function(rank) {
-  if (rank === 1) return window.PRIZES.ipad;
-  if (rank === 2) return window.PRIZES.kindle;
+  if (rank === 1) return window.PRIZES.kindle;
+  if (rank === 2) return window.PRIZES.instax;
   if (rank === 3) return window.PRIZES.a4;
   if (rank <= 10) return window.PRIZES.mini;
   if (rank <= 25) return window.PRIZES.cr15;

@@ -134,8 +134,8 @@ function Podium({ overall, grade }) {
         </p>
 
         <div className="imc-podium">
-          <PodiumCard rank={2} student={g2} medal="🥈" tone="silver" prize={window.PRIZES.kindle}/>
-          <PodiumCard rank={1} student={g1} medal="🥇" tone="gold"   prize={window.PRIZES.ipad}/>
+          <PodiumCard rank={2} student={g2} medal="🥈" tone="silver" prize={window.PRIZES.instax}/>
+          <PodiumCard rank={1} student={g1} medal="🥇" tone="gold"   prize={window.PRIZES.kindle}/>
           <PodiumCard rank={3} student={g3} medal="🥉" tone="bronze" prize={window.PRIZES.a4}/>
         </div>
       </div>
@@ -261,14 +261,14 @@ function PrizeShowcase() {
         <div className="imc-prize-grid">
           <article className="imc-prize-card gold feature">
             <div className="label">RANK 1 · GOLD</div>
-            <h3>Apple iPad 10th Gen</h3>
-            <div className="img-wrap"><img src="assets/prizes/ipad.webp" alt="iPad" loading="lazy" decoding="async"/></div>
+            <h3>Kindle Paperwhite</h3>
+            <div className="img-wrap"><img src="assets/prizes/kindle.webp" alt="Kindle Paperwhite" loading="lazy" decoding="async"/></div>
             <div className="meta">+ 3 months MathAI Premium</div>
           </article>
           <article className="imc-prize-card silver">
             <div className="label">RANK 2 · SILVER</div>
-            <h3>Kindle Paperwhite</h3>
-            <div className="img-wrap"><img src="assets/prizes/kindle.webp" alt="Kindle" loading="lazy" decoding="async"/></div>
+            <h3>Fujifilm Instax Mini 12</h3>
+            <div className="img-wrap"><img src="assets/prizes/instax.webp" alt="Fujifilm Instax Mini 12" loading="lazy" decoding="async"/></div>
             <div className="meta">+ 3 months MathAI Premium</div>
           </article>
           <article className="imc-prize-card bronze">

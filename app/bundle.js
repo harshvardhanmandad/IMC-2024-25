@@ -756,13 +756,13 @@ function Podium({
     student: g2,
     medal: "\uD83E\uDD48",
     tone: "silver",
-    prize: window.PRIZES.kindle
+    prize: window.PRIZES.instax
   }), /*#__PURE__*/React.createElement(PodiumCard, {
     rank: 1,
     student: g1,
     medal: "\uD83E\uDD47",
     tone: "gold",
-    prize: window.PRIZES.ipad
+    prize: window.PRIZES.kindle
   }), /*#__PURE__*/React.createElement(PodiumCard, {
     rank: 3,
     student: g3,
@@ -963,11 +963,11 @@ function PrizeShowcase() {
     className: "imc-prize-card gold feature"
   }, /*#__PURE__*/React.createElement("div", {
     className: "label"
-  }, "RANK 1 \xB7 GOLD"), /*#__PURE__*/React.createElement("h3", null, "Apple iPad 10th Gen"), /*#__PURE__*/React.createElement("div", {
+  }, "RANK 1 \xB7 GOLD"), /*#__PURE__*/React.createElement("h3", null, "Kindle Paperwhite"), /*#__PURE__*/React.createElement("div", {
     className: "img-wrap"
   }, /*#__PURE__*/React.createElement("img", {
-    src: "assets/prizes/ipad.webp",
-    alt: "iPad",
+    src: "assets/prizes/kindle.webp",
+    alt: "Kindle Paperwhite",
     loading: "lazy",
     decoding: "async"
   })), /*#__PURE__*/React.createElement("div", {
@@ -976,11 +976,11 @@ function PrizeShowcase() {
     className: "imc-prize-card silver"
   }, /*#__PURE__*/React.createElement("div", {
     className: "label"
-  }, "RANK 2 \xB7 SILVER"), /*#__PURE__*/React.createElement("h3", null, "Kindle Paperwhite"), /*#__PURE__*/React.createElement("div", {
+  }, "RANK 2 \xB7 SILVER"), /*#__PURE__*/React.createElement("h3", null, "Fujifilm Instax Mini 12"), /*#__PURE__*/React.createElement("div", {
     className: "img-wrap"
   }, /*#__PURE__*/React.createElement("img", {
-    src: "assets/prizes/kindle.webp",
-    alt: "Kindle",
+    src: "assets/prizes/instax.webp",
+    alt: "Fujifilm Instax Mini 12",
     loading: "lazy",
     decoding: "async"
   })), /*#__PURE__*/React.createElement("div", {
