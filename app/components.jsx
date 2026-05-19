@@ -392,7 +392,7 @@ function ChallengeDrawer({ challenge, grade, meta, challengeNum, onClose }) {
     const buckets = {
       champ: { id:'champ', label:'RANK 1',         range:'', desc:'SEZNIK Mini Thermal Printer + 2 months MathAI', rows:[] },
       top3:  { id:'top3',  label:'RANKS 2–3',  range:'', desc:'1.5 months MathAI Premium',                     rows:[] },
-      top10: { id:'top10', label:'RANKS 4–10', range:'', desc:'1 month MathAI Premium',                        rows:[] },
+      top10: { id:'top10', label:'RANKS 4–10', range:'', desc:'45 days MathAI Premium', rows:[] },
       top20: { id:'top20', label:'RANKS 11–20',range:'', desc:'45 days MathAI Premium',                        rows:[] },
     };
     challenge.rows.forEach(r => {
@@ -420,7 +420,7 @@ function ChallengeDrawer({ challenge, grade, meta, challengeNum, onClose }) {
           <div className="imc-cw-drawer-ladder-row">
             <span className="rung champ"><b>#1</b> Mini Printer + 2mo</span>
             <span className="rung"><b>#2–3</b> 1.5 months</span>
-            <span className="rung"><b>#4–10</b> 1 month</span>
+            <span className="rung"><b>#4–10</b> 45 days</span>
             <span className="rung"><b>#11–20</b> 45 days</span>
           </div>
         </div>
@@ -477,7 +477,7 @@ function ChallengeRow({ row }) {
   const prizeNameSingle = (() => {
     if (row.rank === 1)   return 'Mini Printer';
     if (row.rank <= 3)    return '1.5 months MathAI';
-    if (row.rank <= 10)   return '1 month MathAI';
+    if (row.rank <= 10)   return '45 days MathAI';
     return '45 days MathAI';
   })();
   const prizeSub = (row.rank === 1) ? '+ 2 months MathAI Premium' : '+ 10x Speed & Logic Program';
