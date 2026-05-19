@@ -1202,7 +1202,7 @@ function ChallengeDrawer({
         id: 'top10',
         label: 'RANKS 4–10',
         range: '',
-        desc: '1 month MathAI Premium',
+        desc: '45 days MathAI Premium',
         rows: []
       },
       top20: {
@@ -1304,7 +1304,7 @@ function ChallengeRow({
   const prizeNameSingle = (() => {
     if (row.rank === 1) return 'Mini Printer';
     if (row.rank <= 3) return '1.5 months MathAI';
-    if (row.rank <= 10) return '1 month MathAI';
+    if (row.rank <= 10) return '45 days MathAI';
     return '45 days MathAI';
   })();
   const prizeSub = row.rank === 1 ? '+ 2 months MathAI Premium' : '+ 10x Speed & Logic Program';
